@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px pour le responsive */
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(hack.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    padding: 2rem;
+}
+
+.carte {
+    width: 100%;
+    max-width: 44rem;
+    color: aliceblue;
+    text-align: center;
+    padding: 4rem 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 1.6rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+    cursor: pointer;
+    position: relative;
+}
+
+.carte:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.carte img {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.carte h2 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    line-height: 1.2;
+}
+
+.carte p {
+    font-size: 1.6rem;
+    margin: 1.5rem auto;
+    max-width: 33rem;
+    line-height: 1.6;
+}
+
+.reseau {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.reseau img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    padding: 0.8rem;
+}
+
+.reseau img:hover {
+    background: violet;
+    transform: translateY(-0.3rem);
+}
+
+.bouton {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: #fff;
+    color: rgb(209, 63, 197);
+    padding: 1.2rem 3.5rem;
+    border-radius: 3rem;
+    margin: 2.5rem 0 1rem;
+    transition: all 0.3s ease;
+}
+
+.bouton:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet Tilt Dynamique */
+@media (hover: hover) {
+    .carte {
+        transition: transform 0.1s linear;
+    }
+}
+
+/* Responsive pour Mobile */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .carte {
+        padding: 3rem 2rem;
+    }
+
+    .carte h2 {
+        font-size: 2.8rem;
+    }
+
+    .bouton {
+        width: 100%;
+        max-width: 25rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carte img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .reseau img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
