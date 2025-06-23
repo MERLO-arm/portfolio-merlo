@@ -1,149 +1,195 @@
-
+/* Général */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-    font-size: 62.5%; /* 1rem = 10px pour le responsive */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a), url('hack.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #f5f5f5;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-    width: 100%;
-    min-height: 100vh;
-    background-image: url(hack.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    perspective: 1000px;
-    padding: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  
 }
 
+/* Carte de présentation */
 .carte {
-    width: 100%;
-    max-width: 44rem;
-    color: aliceblue;
-    text-align: center;
-    padding: 4rem 3rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 1.6rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    transition: all 0.5s ease;
-    transform-style: preserve-3d;
-    will-change: transform;
-    cursor: pointer;
-    position: relative;
-}
-
-.carte:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  margin-bottom: 3rem;
 }
 
 .carte img {
-    width: 14rem;
-    height: 14rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1.5rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00ffd5;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
+}
+
+.carte h1 {
+  font-size: 2rem;
+  color: #00ffd5;
 }
 
 .carte h2 {
-    font-size: 3.2rem;
-    font-weight: 600;
-    margin: 2rem 0 1rem;
-    line-height: 1.2;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #ccc;
 }
 
 .carte p {
-    font-size: 1.6rem;
-    margin: 1.5rem auto;
-    max-width: 33rem;
-    line-height: 1.6;
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 1.5rem;
 }
 
+/* Réseaux sociaux */
 .reseau {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 2rem 0;
+  margin-bottom: 1rem;
 }
 
-.reseau img {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    padding: 0.8rem;
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
 }
 
-.reseau img:hover {
-    background: violet;
-    transform: translateY(-0.3rem);
+.social-icon:hover img {
+  transform: scale(1.2);
 }
 
+/* Bouton contact */
 .bouton {
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.6rem;
-    font-weight: 700;
-    background: #fff;
-    color: rgb(209, 63, 197);
-    padding: 1.2rem 3.5rem;
-    border-radius: 3rem;
-    margin: 2.5rem 0 1rem;
-    transition: all 0.3s ease;
+  display: inline-block;
+  background: #00ffd5;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .bouton:hover {
-    transform: translateY(-0.2rem);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: #00bfa6;
+  transform: scale(1.05);
 }
 
-/* Effet Tilt Dynamique */
-@media (hover: hover) {
-    .carte {
-        transition: transform 0.1s linear;
-    }
+/* Projets */
+.projets {
+  margin-top: 2rem;
 }
 
-/* Responsive pour Mobile */
-@media (max-width: 768px) {
-    html {
-        font-size: 55%;
-    }
-
-    .container {
-        padding: 1.5rem;
-    }
-
-    .carte {
-        padding: 3rem 2rem;
-    }
-
-    .carte h2 {
-        font-size: 2.8rem;
-    }
-
-    .bouton {
-        width: 100%;
-        max-width: 25rem;
-        padding: 1.5rem;
-    }
+.projets h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #00ffd5;
+  border-bottom: 2px solid #00ffd5;
+  padding-bottom: 0.5rem;
 }
 
-@media (max-width: 480px) {
-    .carte img {
-        width: 12rem;
-        height: 12rem;
-    }
+.projets article {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid #00ffd5;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
 
-    .reseau img {
-        width: 3.5rem;
-        height: 3.5rem;
-    }
+.projets article:hover {
+  transform: translateX(5px);
+}
+
+.projets h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.projets p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.footer {
+  background-color: #111;
+  color: #f0f0f0;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid #333;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+.footer p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .carte img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .carte h1 {
+    font-size: 1.5rem;
+  }
+
+  .carte h2 {
+    font-size: 1rem;
+  }
+
+  .projets h2 {
+    font-size: 1.5rem;
+  }
+
+  .projets h3 {
+    font-size: 1rem;
+  }
+}

@@ -1,51 +1,136 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="google-site-verification" content="AYgoPE11GTCUrWBmpLxrxFX0lQ4H6P3PpCKecNYMPIA" />
-        <meta name="viewport" content="with=device-with, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-        <title>Portfolio|Carte de Visite - ETC SCHOOL</title>
-        <link rel="stylesheet" href="styles.css">
-    </head> 
-    <body>
-        <div class="container">
-            <div class="carte" data-tilt>
-                <img src="mer.jpg">
-                <h2>Armel Domguia</h2>
-                <p>Développeur Web Junior<br>&<br>Technicien en automatisme</p>
-                <div class="reseau">
-                    
-                    <a href="https://wa.me/+237651795724" class="social-icon"><i class="ri-whatsapp-line"></i><img src="wat.png"></a>
-                </div>
-                <a href="https://formsubmit.co/el/jufora" class="bouton">Contactez-moi</a>
-                >
-            </div>
-        </div>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script>
-            document.querySelector('.carte').addEventListener('mousemove', (e) => {
-                const card = e.currentTarget;
-                const cardRect = card.getBoundingClientRect();
-                const centerX = cardRect.left + cardRect.width / 2;
-                const centerY = cardRect.top + cardRect.height / 2;
-                
-                const rotateX = -(e.clientY - centerY) / 25;
-                const rotateY = (e.clientX - centerX) / 25;
-                
-                card.style.transform = `
-                    perspective(1000px)
-                    rotateX(${Math.max(Math.min(rotateX, 10), -10)}deg)
-                    rotateY(${Math.max(Math.min(rotateY, 10), -10)}deg)
-                    scale(1.02)
-                `;
-            });
-            
-            document.querySelector('.carte').addEventListener('mouseleave', (e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
-            });
-            </script>
-    </body>
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="AYgoPE11GTCUrWBmpLxrxFX0lQ4H6P3PpCKecNYMPIA" />
+
+  <!-- SEO -->
+  <title>Merlo Domguia - Développeur Web Junior & Technicien en Automatisme au Cameroun</title>
+  <meta name="description" content="Portfolio professionnel de Merlo Domguia : développeur web junior & technicien en automatisme. Découvrez mes projets web, e-commerce, logiciels de gestion et plus." />
+  <meta name="keywords" content="Merlo Domguia, développeur web junior, automatisme industriel, site web Cameroun, portfolio développeur, projets web, HTML CSS JS, Vercel" />
+  <meta name="author" content="Merlo Domguia" />
+  <link rel="canonical" href="https://merlo-domguia.vercel.app/index.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Merlo Domguia - Développeur Web & Technicien en Automatisme" />
+  <meta property="og:description" content="Découvrez mes projets web et compétences techniques dans ce portfolio moderne hébergé sur Vercel." />
+  <meta property="og:image" content="https://merlo-domguia.vercel.app/mer.jpg" />
+  <meta property="og:url" content="https://merlo-domguia.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts + CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <section class="carte" data-tilt>
+      <img src="mer.jpg" alt="Photo de Merlo Domguia">
+      <h1>Merlo Domguia</h1>
+      <h2>Développeur Web Junior & Technicien en Automatisme</h2>
+      <p>Je crée des sites performants et modernes, adaptés aux besoins des entreprises et particuliers au Cameroun.</p>
+
+      <div class="reseau">
+        <a href="https://wa.me/+237691149844" class="social-icon" title="Contact WhatsApp">
+          <img src="wat.png" alt="Icône WhatsApp">
+        </a>
+      </div>
+
+      <a href="https://formsubmit.co/el/jufora" class="bouton">Contactez-moi</a>
+    </section>
+
+    <!-- SECTION PROJETS -->
+   <section class="projets">
+  <h2>Mes Projets Web Réalisés</h2>
+
+  <article>
+    <h3>🛒 Site e-commerce</h3>
+    <p>Création d’une boutique en ligne moderne avec panier, paiement intégré et interface admin. Technologies : HTML, CSS, JS.</p>
+  </article>
+
+  <article>
+    <h3>💼 Plateforme de gestion de la production </h3>
+    <p>Application web pour gérer la production du personnel dans une entreprise. </p>
+  </article>
+
+  <article>
+    <h3>🖥️ GMAO - Maintenance Assistée</h3>
+    <p>Plateforme web pour planifier et suivre la maintenance des équipements industriels. Adaptée aux techniciens automatisme(directeur techniques)</p>
+  </article>
+
+  <article>
+    <h3>💬 Site de messagerie instantanée</h3>
+    <p>Application simple de chat étudiant inspirée de Facebook Messenger. Gestion des connexions en ligne/offline, messages, avatar.</p>
+  </article>
+     
+    <article>
+    <h3>💍 Site de mariage</h3>
+    <p>Développement d'un site interactif pour un mariage, incluant l’histoire du couple, les photos, le programme de la cérémonie et un système d’enregistrement des invités. Adapté pour ordinateurs et mobiles.</p>
+  </article>
+
+<article>
+  <h3>🍰 Site vitrine pour une pâtisserie</h3>
+  <p>Création d’un site web élégant pour une pâtisserie locale avec menu interactif, galerie de gâteaux et système de commande en ligne. Design responsive et attrayant.</p>
+</article>
+
+<article>
+  <h3>🍷 Site vitrine pour une entreprise de vin</h3>
+  <p>Conception d’un site vitrine pour un producteur de vin, incluant l’histoire du domaine, les produits disponibles, et un formulaire de contact personnalisé. Optimisé pour le SEO et les performances.</p>
+</article> 
+    <article>
+        <h3>🎨 Portfolio personnel</h3>
+        <p>Développement d’un portfolio en ligne pour présenter mes compétences, projets et expériences professionnelles. Design moderne et responsive.</p>
+    </article>
+    
+    <article>
+        <h3>📅 Application de gestion de tâches</h3>
+        <p>Application web pour organiser ses tâches quotidiennes avec rappels, priorités et catégories. Interface utilisateur claire et efficace.</p>
+    </article>
+
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Merlo Domguia. Tous droits réservés.</p>
+    <div class="footer-links">
+      <a href="mailto:merlo.domguia@gmail.com">me contacter</a>
+      <a href="https://github.com/MERLO-arm" target="_blank">GitHub</a>
+      
+    </div>
+  </div>
+</footer>
+
+
+  </main>
+
+  <!-- Script effet carte -->
+  <script>
+    const card = document.querySelector('.carte');
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      const rotateX = -(e.clientY - centerY) / 25;
+      const rotateY = (e.clientX - centerX) / 25;
+
+      card.style.transform = `
+        perspective(1000px)
+        rotateX(${Math.max(Math.min(rotateX, 10), -10)}deg)
+        rotateY(${Math.max(Math.min(rotateY, 10), -10)}deg)
+        scale(1.02)
+      `;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+    });
+  </script>
+</body>
 </html>
