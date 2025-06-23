@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armelia - Développeur Web Junior & Technicien en Automatisme & Informaticien</title>
-    <meta name="description" content="Portfolio de Merlo Domguia, développeur web junior et technicien en automatisme , je suis aussi un informaticien. Découvrez mes compétences en développement web (sites statiques, dynamiques, e-commerce, écoles en ligne), bases de données, automatisme (programmation, dimensionnement, câblage), et informatique (configuration réseau, installation). Contactez-moi pour vos projets web , d'automatisme  et d'informatique.">
-    <meta name="keywords" content="développeur web, technicien automatisme, portfolio,developperu de  site web,developperu de e-commerce,developperu d' école en ligne,createur base de données, programmation, câblage en electronique, configuration réseau, installation, arduino réseau,simulation sur proteus, maitrise zelio,maitrise pack office, merlo domguia,programmeur de douala,technicien en informatique,  cameroun">
-    <meta name="author" content="Merlo Domguia">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="canonical" href="https://votre-domaine.com">  </head>
-<body>
-    <div class="container">
-        <div class="carte" data-tilt>
-            <img src="mer.jpg" alt="Photo de Merlo Domguia">  <h2>Armel Domduia
-            <p>Développeur Web Junior<br>&<br>Technicien en Automatisme</p>
-            <div class="reseau">
-                <a href="https://wa.me/+237651795724" class="social-icon" target="_blank" rel="noopener noreferrer"><img src="wat.png" alt="WhatsApp"></a> </div>
-            <a href="https://formsubmit.co/el/jufora" class="bouton" target="_blank" rel="noopener noreferrer">Contactez-moi</a> </div>
-    </div>
+<html>
+    <head>
+        <meta name="google-site-verification" content="biy0XPAZwpgVsTq9HJVIBHIuP-yTx8XEHUJ9nENvbC0" />
+        <meta name="viewport" content="with=device-with, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+        <title>Portfolio|Carte de Visite - ETC SCHOO</title>
+        <link rel="stylesheet" href="styles.css">
+    </head> 
+    <body>
+        <div class="container">
+            <div class="carte" data-tilt>
+                <img src="mer.jpg">
+                <h2>Armel Domguia</h2>
+                <p>Développeur Web Junior<br>&<br>Technicien en automatisme</p>
+                <div class="reseau">
+                    
+                    <a href="https://wa.me/+237651795724" class="social-icon"><i class="ri-whatsapp-line"></i><img src="wat.png"></a>
+                </div>
+                <a href="https://formsubmit.co/el/jufora" class="bouton">Contactez-moi</a>
+                >
+            </div>
+        </div>
 
-    <script>
-        // ... ( code JavaScript)
-        document.querySelector('.carte').addEventListener('mousemove', (e) => {
+        <script>
+            document.querySelector('.carte').addEventListener('mousemove', (e) => {
                 const card = e.currentTarget;
                 const cardRect = card.getBoundingClientRect();
                 const centerX = cardRect.left + cardRect.width / 2;
@@ -44,6 +45,6 @@
             document.querySelector('.carte').addEventListener('mouseleave', (e) => {
                 e.currentTarget.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
             });
-    </script>
-</body>
+            </script>
+    </body>
 </html>
