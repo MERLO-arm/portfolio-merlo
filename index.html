@@ -83,10 +83,21 @@
   <h3>🍷 Site vitrine pour une entreprise de vin</h3>
   <p>Conception d’un site vitrine pour un producteur de vin, incluant l’histoire du domaine, les produits disponibles, et un formulaire de contact personnalisé. Optimisé pour le SEO et les performances.</p>
 </article> 
-    <article>
-        <h3>🎨 Portfolio personnel</h3>
-        <p>Développement d’un portfolio en ligne pour présenter mes compétences, projets et expériences professionnelles. Design moderne et responsive.</p>
-    </article>
+    <article itemscope itemtype="https://schema.org/CreativeWork">
+    <h3 itemprop="name">🎨 Portfolio professionnel</h3>
+    <p itemprop="description">
+        <a href="https://atangana-gallus.netlify.app/" 
+           target="_blank" 
+           rel="noopener noreferrer nofollow"
+           aria-label="Voir le portfolio de Gallus Eric Atangana développé par Merlo Domguia"
+           title="Portfolio Gallus Eric Atangana">
+            Développement d'un portfolio professionnel en ligne présentant des compétences en génie mécanique, chaudronnerie et construction métallique. Design moderne, responsive et optimisé SEO.
+        </a>
+    </p>
+    <meta itemprop="url" content="https://atangana-gallus.netlify.app/">
+    <meta itemprop="creator" content="Merlo Domguia">
+    <meta itemprop="keywords" content="portfolio mécanique, site vitrine professionnel, développeur web Cameroun, création site enseignant">
+</article>
     
     <article>
         <h3>📅 Application de gestion de tâches</h3>
@@ -108,7 +119,49 @@
 
 
   </main>
-
+ <!-- Schema.org pour le développeur -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Merlo Domguia",
+  "url": "https://merlo-domguia.vercel.app/",
+  "jobTitle": "Développeur Web Full Stack",
+  "description": "Développeur web freelance spécialisé dans la création de sites vitrine et applications web et plus. Créateur de mon portfolio",
+  "sameAs": [
+    "https://merlo-domguia.vercel.app/",
+    "https://github.com/MERLO-arm",
+    "https://www.linkedin.com/in/armel-domguia/"
+  ],
+ 
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "autdidacte en développement web",
+    "description": "Formation autodidacte en développement web, incluant HTML, CSS, JavaScript, et frameworks modernes.",
+    "credentialCategory": "Formation en ligne",
+    "validFor": {
+      "@type": "Duration",
+      "description": "pour toujours",
+      "value": "P1Y"
+    },
+    "credentialCategory": "Développement Web",
+    "issuedBy": {
+      "@type": "Organization",
+      "name": "coursera , udeny , udemy , freecodecamp , youtube, openclassroom",
+    }
+  },
+  "offers": {
+    "@type": "Service",
+    "name": "Développement de sites web",
+    "description": "Création de sites vitrine professionnels avec SEO optimisé",
+    "validFor": {
+      "@type": "Duration",
+      "description": "Garantie technique sur les développements",
+      "value": "P2Y"
+    }
+  }
+}
+</script>
   <!-- Script effet carte -->
   <script>
     const card = document.querySelector('.carte');
